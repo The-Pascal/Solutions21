@@ -781,7 +781,6 @@ nav {
   letter-spacing: var(--spacing);
   padding: 15px;
   transition: var(--transition);
-  text-decoration: none;
   font-weight: bold;
   padding: 0.75rem 0;
   }
@@ -833,6 +832,11 @@ a:hover:after {
   font-weight: bold;
   letter-spacing: var(--spacing);
 }
+.loginbtn:hover{
+  background: white;
+  color: #000;
+  cursor: pointer;
+}
 
 .loginbigbtn{
   display: none;
@@ -846,7 +850,7 @@ a:hover:after {
 
 /* Media query for navbar in bigger screen */
 /* Navbar was made with mobile first approach */
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 1150px) {
   nav {
     background: transparent;
   }
@@ -940,7 +944,7 @@ a:hover:after {
   background-blend-mode: lighten;
 }
 .card-3 {
-  background-image: url("https://images.unsplash.com/photo-1585166059782-f28143545183?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8bWVjaGFuaWNhbHxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60");
+  background-image: url("https://images.pexels.com/photos/159298/gears-cogs-machine-machinery-159298.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
   background-size: cover;
   background-position: center;
   background-color: rgba(0, 0, 0, 0.137);
@@ -1162,24 +1166,14 @@ footer{
   text-underline-offset: 8px;
   text-decoration: underline;
   font-size: 1.5rem;
-  
 }
 .footerLinks>h2{
   font-size: 0.8rem;
   cursor: pointer;
-  text-decoration: none;
-  
 }
-.footerLinks{
+.footerLinks{ margin: 0 auto;
  padding:2rem;
  font-size: 0.8rem;
- text-decoration: none;
- 
-}
-.footerLinks a{
-  background: black;
-  color: white;
-  text-decoration: none;
 }
 
 @media screen and (max-width:680px){
@@ -1187,7 +1181,7 @@ footer{
     display: grid;
     padding: 0;
   }
-  .footerLinks{
+  .footerLinks{ margin: 0 auto;
     padding: 0;
     float: left;
   }
@@ -1273,12 +1267,8 @@ footer{
     outline: 0;
 }
 
-#profimg{
-  width: 50px;
-  border-radius: 50px;
-  padding: 2rem;
-}
-
-.prof {
+.prof:hover{
   cursor: pointer;
+  border: white solid 1px;
 }
+/*  */

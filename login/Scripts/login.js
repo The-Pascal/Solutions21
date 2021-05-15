@@ -14,6 +14,7 @@
           firebase.auth().onAuthStateChanged(function(user) {
             if (user) {
                 console.log("Successfully logged in!!")
+               
             } else {
             console.log("Not logged in!!")
             }
@@ -35,10 +36,10 @@
                         console.log("Email Sent Succesfully!!!");
                         alert_creator("Verification Link sent!! Check your email");
                         var uid = user.uid;
-                        saveuserdata(uid,name,email, college,"www.google.com","fromEmail");
+                        saveuserdata(uid,name,email, college,"https://t4.ftcdn.net/jpg/00/64/67/63/360_F_64676383_LdbmhiNM6Ypzb3FM4PPuFP9rHe7ri8Ju.jpg","fromEmail");
                         }, function(error) {
                         console.log(error);
-                        alert(error);
+                        alert_creator(error);
                         });
                     }, function(error) {
                             // Handle Errors here.
@@ -75,8 +76,10 @@
               console.log("Document written with ID: ", uid);
               if(flag=="fromGoogle")
               {
-                alert_creator("Successfully logged in")
-                  console.log("registered with google")
+                alert_creator("Successfully logged in");
+                  console.log("registered with google");
+		 window.history.back();
+                  
               }
               else{
                 logout();
@@ -115,7 +118,8 @@
               db.collection("users").doc(user.uid)
       .get().then((doc) => {
           if (doc.exists) {
-              console.log("Document data:", doc.data())
+              console.log("Document data:", doc.data());
+              
              
           } else {
               // doc.data() will be undefined in this case

@@ -238,7 +238,7 @@ padding: 2rem;
 
 /* Media query for navbar in bigger screen */
 /* Navbar was made with mobile first approach */
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 1150px) {
   nav {
     background: black;
   }
@@ -363,7 +363,7 @@ padding: 2rem;
 
 .cm1 {
 	margin:2em;
-  
+  background: white;
 	border: 1px solid rgb(255, 255, 255);
 	backdrop-filter: blur(5px);
 }
@@ -477,5 +477,10 @@ footer{
   background: white;
   color: #000;
   cursor: pointer;
+}
+
+.prof:hover{
+  cursor: pointer;
+  border: white solid 1px;
 }
 
